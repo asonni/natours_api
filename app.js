@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const colors = require('colors');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -10,6 +11,9 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
+
+// Enable colors
+colors.enable();
 
 // Enable body parser
 app.use(express.json());
