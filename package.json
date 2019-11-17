@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start:prod": "NODE_ENV=production node server",
-    "start:dev": "nodemon server.js"
+    "start:dev": "nodemon server.js",
+    "lint": "eslint ./",
+    "debug": "ndb server.js"
   },
   "author": "Aladdin Sonni",
   "license": "ISC",
@@ -27,6 +29,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
+    "ndb": "^1.1.5",
     "nodemon": "^1.19.4",
     "prettier": "^1.19.1"
   },
